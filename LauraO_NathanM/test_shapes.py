@@ -10,20 +10,32 @@ def test_area_circle():
 
     assert expected == pytest.approx(actual, 0.001)
 
+    expected = 'Circle area with a radius of 2 is 12.566'
+    actual = str(circle)
+    assert expected == actual
+
 
 def test_area_square():
     expected = 9
-    square_1 = shapes.Square() 
-    square_1.side = 3 
-    actual = square_1.area_sq
+    square = shapes.Square() 
+    square.side = 3 
+    actual = square.area_sq
 
+    assert expected == actual
+
+    expected = 'Square area with a side of 3 is 9'
+    actual = str(square)
     assert expected == actual
 
 def test_area_rectangle():
     expected = 8
-    rectangle_1 = shapes.Rectangle()
-    rectangle_1.length = 4
-    rectangle_1.width = 2
-    actual = rectangle_1.area_rec
+    rectangle = shapes.Rectangle()
+    rectangle.length = 4
+    rectangle.width = 2
+    actual = rectangle.area_rec
 
+    assert expected == actual
+
+    expected = 'Rectangle area with a length of 4 and a width of 2 is 8'
+    actual = str(rectangle)
     assert expected == actual
